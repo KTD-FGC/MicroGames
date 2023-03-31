@@ -52,6 +52,11 @@ public class BasketBallPlayer : MonoBehaviour
             power.value = 0;
             fakeBall.enabled = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void FixedUpdate()
