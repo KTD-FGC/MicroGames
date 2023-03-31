@@ -13,6 +13,8 @@ public class BallScript : MonoBehaviour
     {
         
         ballRB.AddForce(new Vector2(BasketBallPlayer.powerLevel * 300, BasketBallPlayer.powerLevel * 600));
+
+        StartCoroutine(DestroyBall());
     }
 
     private void FixedUpdate()
@@ -21,5 +23,11 @@ public class BallScript : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    IEnumerator DestroyBall()
+    {
+        yield return new WaitForSeconds(3.5f);
+        Destroy(this.gameObject);
+        yield return null;
     }
 }
