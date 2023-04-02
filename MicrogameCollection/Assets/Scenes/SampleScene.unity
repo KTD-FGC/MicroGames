@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0e1027250c5ce4a978573eecb0c6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 80
+  timeLeft: 85
   timerOn: 0
   timerText: {fileID: 883733787}
   gameOverScreen: {fileID: 644321638}
@@ -2608,7 +2608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1704175142}
   - component: {fileID: 1704175143}
-  - component: {fileID: 1704175144}
+  - component: {fileID: 1704175145}
   m_Layer: 0
   m_Name: Backboard
   m_TagString: Untagged
@@ -2683,8 +2683,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1704175144
-BoxCollider2D:
+--- !u!60 &1704175145
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2696,7 +2696,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.48890042, y: 0.24459207}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2706,9 +2706,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.89719915, y: 1.2608159}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5338721, y: 0.875}
+      - {x: 0.20256996, y: -0.3813954}
+      - {x: 0.5305233, y: -0.3780465}
+      - {x: 0.5817857, y: -0.36931312}
+      - {x: 0.8303137, y: -0.35855818}
+      - {x: 0.8205695, y: 0.86525583}
 --- !u!1 &1731729970
 GameObject:
   m_ObjectHideFlags: 0
