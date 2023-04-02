@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BallScript : MonoBehaviour
 {
@@ -16,18 +14,19 @@ public class BallScript : MonoBehaviour
 
         StartCoroutine(DestroyBall());
     }
-
-    private void FixedUpdate()
-    {
-        if (this.gameObject.transform.position.y <= -10)
-        {
-            Destroy(this.gameObject);
-        }
-    }
     IEnumerator DestroyBall()
     {
         yield return new WaitForSeconds(3.5f);
         Destroy(this.gameObject);
+        //gameObject.SetActive(false);
         yield return null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "BallDestroyer")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

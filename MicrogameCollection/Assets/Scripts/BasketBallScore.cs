@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class BasketBallScore : MonoBehaviour
 {
     public int score;
-    public Text scoreText;
+
+    [SerializeField]
+    Text scoreText;
 
     // Start is called before the first frame update
     void Start()

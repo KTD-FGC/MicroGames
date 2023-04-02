@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,13 +21,10 @@ public class BasketBallPlayer : MonoBehaviour
     [SerializeField]
     SpriteRenderer fakeBall;
 
-    static public float powerLevel;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    TimerScript timer;
 
+    static public float powerLevel;
     // Update is called once per frame
     void Update()
     {
@@ -61,9 +56,14 @@ public class BasketBallPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && canShoot == true)
         {
             power.value += .03f;
+        }
+
+        if (timer.timerOn == false)
+        {
+            Destroy(this.gameObject);
         }
     }
 
